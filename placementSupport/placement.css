@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  --dark:#2d3142;
+  --steel:#4f5d75;
+  --muted:#bfc0c0;
+  --white:#ffffff;
+  --accent:#ef8354;
+}
+
+* {
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-family:Inter,sans-serif;
+}
+
+body {
+  background:var(--dark);
+  color:var(--white);
+}
+
+/* HERO */
+.p-hero {
+  min-height:100vh;
+  background:url("assets/bg.jpg") center/cover;
+  position:relative;
+}
+
+.overlay {
+  position:absolute;
+  inset:0;
+  background:linear-gradient(120deg,rgba(45,49,66,.92),rgba(79,93,117,.85));
+}
+
+.p-hero-inner {
+  position:relative;
+  z-index:2;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:4rem;
+  padding:0 10%;
+}
+
+.p-hero-content h1 {
+  font-size:3.2rem;
+  line-height:1.15;
+}
+
+.p-hero-content span {
+  color:var(--accent);
+  font-size:3.4rem;
+}
+
+.p-hero-content p {
+  font-size:1.2rem;
+  color:var(--muted);
+  margin-top:1.2rem;
+}
+
+.p-hero-image img {
+  max-width:460px;
+  max-height:420px;
+  animation:float 4s ease-in-out infinite;
+  filter:drop-shadow(0 20px 40px rgba(0,0,0,.4));
+}
+
+@keyframes float {
+  50% { transform:translateY(-12px); }
+}
+
+/* REVEAL */
+.reveal {
+  opacity:0;
+  transform:translateY(40px);
+  transition:.8s ease;
+}
+.reveal.active {
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* STATS */
+.stats {
+  display:flex;
+  justify-content:space-around;
+  padding:4rem 8%;
+}
+.stat h2 {
+  font-size:3rem;
+  color:var(--accent);
+}
+
+/* FLOW */
+.flow {
+  padding:5rem 8%;
+  text-align:center;
+}
+.flow-track {
+  display:flex;
+  justify-content:center;
+  gap:2rem;
+  flex-wrap:wrap;
+}
+.flow-step {
+  background:var(--steel);
+  padding:1.2rem 1.8rem;
+  border-radius:30px;
+  cursor:pointer;
+  transition:.3s;
+}
+.flow-step:hover {
+  background:var(--accent);
+  transform:translateY(-6px);
+}
+
+/* SUPPORT */
+.support {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:2rem;
+  padding:4rem 8%;
+}
+.support-card {
+  background:var(--steel);
+  padding:2rem;
+  border-radius:14px;
+  cursor:pointer;
+  transition:.3s;
+}
+.support-card:hover {
+  background:var(--accent);
+  transform:translateY(-8px);
+}
+
+/* COMPANIES */
+.companies {
+  padding:4rem 8%;
+  text-align:center;
+}
+.companies img {
+  max-width:100%;
+}
+
+/* CTA */
+.cta {
+  text-align:center;
+  padding:5rem 8%;
+}
+.cta button {
+  background:var(--accent);
+  border:none;
+  padding:1rem 2.5rem;
+  border-radius:30px;
+  cursor:pointer;
+}
+
+/* MODAL */
+.info-modal {
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.6);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  opacity:0;
+  pointer-events:none;
+  transition:.3s;
+  z-index:999;
+}
+.info-modal.active {
+  opacity:1;
+  pointer-events:all;
+}
+.info-card {
+  background:var(--dark);
+  padding:2.2rem;
+  max-width:520px;
+  border-left:4px solid var(--accent);
+  border-radius:14px;
+}
+.close-btn {
+  float:right;
+  background:none;
+  border:none;
+  color:var(--muted);
+  font-size:1.2rem;
+  cursor:pointer;
+}
+
+/* SCROLL INDICATOR */
+.scroll-indicator {
+  position:fixed;
+  right:26px;
+  bottom:50%;
+  transform:translateY(50%);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:6px;
+  font-size:.75rem;
+  color:var(--muted);
+  opacity:0;
+  transition:.6s;
+}
+.scroll-indicator.show {
+  opacity:1;
+}
+.scroll-core {
+  width:36px;
+  height:36px;
+  background:var(--accent);
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  position:relative;
+}
+.scroll-pulse {
+  position:absolute;
+  inset:-10px;
+  border-radius:50%;
+  border:2px solid var(--accent);
+  animation:pulse 2s infinite;
+}
+.scroll-arrow {
+  width:8px;
+  height:8px;
+  border-right:2px solid var(--dark);
+  border-bottom:2px solid var(--dark);
+  transform:rotate(45deg);
+}
+@keyframes pulse {
+  100% { transform:scale(1.4); opacity:0; }
+}
+
+/* MOBILE */
+@media(max-width:900px){
+  .p-hero-inner {
+    flex-direction:column;
+    text-align:center;
+  }
+  .p-hero-content h1 {
+    font-size:2.4rem;
+  }
+  .p-hero-content span {
+    font-size:2.6rem;
+  }
+  .p-hero-image img {
+    max-width:320px;
+  }
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Placement Support | Coding Internship Institute</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="placement.css">
+</head>
+<body>
+
+<!-- HERO -->
+<section class="p-hero">
+  <div class="overlay"></div>
+
+  <div class="p-hero-inner reveal">
+    <!-- TEXT -->
+    <div class="p-hero-content">
+      <h1>
+        Placement Is Not Luck.<br>
+        <span>It’s a System.</span>
+      </h1>
+      <p>Structured placement support from day one</p>
+    </div>
+
+    <!-- IMAGE -->
+    <div class="p-hero-image">
+      <img src="/placementSupport/assetsOfPlace/front-view-male-student-wearing-black-backpack-holding-copybooks-files-blue-wall.png" alt="Placement support">
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats reveal">
+  <div class="stat" data-target="1200">
+    <h2>0</h2>
+    <p>Students Placed</p>
+  </div>
+  <div class="stat" data-target="450">
+    <h2>0</h2>
+    <p>Hiring Partners</p>
+  </div>
+  <div class="stat" data-target="92">
+    <h2>0%</h2>
+    <p>Placement Rate</p>
+  </div>
+</section>
+
+<!-- FLOW -->
+<section class="flow reveal">
+  <h2>How Placement Support Works</h2> <br> <br> 
+
+  <div class="flow-track">
+    <div class="flow-step" onclick="openModal('Skill Readiness','We make sure you are technically strong with projects and assessments.')">Skill Readiness</div>
+    <div class="flow-step" onclick="openModal('Resume & GitHub','We polish your resume and GitHub until industry-ready.')">Resume & GitHub</div>
+    <div class="flow-step" onclick="openModal('Mock Interviews','Multiple mock interviews to build confidence.')">Mock Interviews</div>
+    <div class="flow-step" onclick="openModal('Job Referrals','We share your profile with hiring partners.')">Job Referrals</div>
+  </div>
+</section>
+
+<!-- SUPPORT -->
+<section class="support reveal">
+  <div class="support-card" onclick="openModal('Dedicated Placement Team','Human support till you get placed.')">
+    <h3>Dedicated Team</h3>
+    <p>Real mentors, real help</p>
+  </div>
+
+  <div class="support-card" onclick="openModal('Interview Scheduling','We handle interview coordination.')">
+    <h3>Interview Scheduling</h3>
+    <p>No stress for students</p>
+  </div>
+
+  <div class="support-card" onclick="openModal('Offer Guidance','We help you choose the right offer.')">
+    <h3>Offer Guidance</h3>
+    <p>Career-focused decisions</p>
+  </div>
+</section>
+
+<!-- COMPANIES -->
+<section class="companies reveal">
+  <h2>Trusted by Hiring Companies</h2>
+  <img src="assets/companies.png" alt="Companies">
+</section>
+
+<!-- CTA -->
+<section class="cta reveal">
+  <h2>Ready to Get Placed?</h2> <br><br>
+  <button>Talk to Placement Mentor</button>
+</section>
+
+<!-- MODAL -->
+<div class="info-modal" id="infoModal">
+  <div class="info-card">
+    <button class="close-btn" onclick="closeModal()">✕</button>
+    <h3 id="modalTitle"></h3>
+    <p id="modalText"></p>
+  </div>
+</div>
+
+<!-- SCROLL INDICATOR -->
+<div class="scroll-indicator" id="scrollIndicator">
+  <div class="scroll-core">
+    <div class="scroll-pulse"></div>
+    <div class="scroll-arrow"></div>
+  </div>
+  <span>Scroll</span>
+</div>
+
+<script src="placement.js"></script>
+</body>
+</html>
