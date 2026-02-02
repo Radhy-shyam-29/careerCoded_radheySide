@@ -5,22 +5,155 @@
   <title>About Us | Coding Internship Institute</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome CDN -->
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Custom Config -->
+    <script>
+    tailwind.config = {
+        theme: {
+        extend: {
+            colors: {
+            primary: '#2D3142',
+            secondary: '#4F5D75',
+            muted: '#BFC0C0',
+            accent: '#EF8354',
+            },
+            fontFamily: {
+            heading: ['Montserrat', 'sans-serif'],
+            body: ['Poppins', 'sans-serif'],
+            },
+        },
+        },
+    }
+    </script>
+
+    <style>
+        .filter-pill {
+            padding: 0.5rem 1.25rem;
+            border-radius: 9999px;
+            border: 1px solid #bfc0c0;
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: #2d3142;
+            background: #ffffff;
+            transition: all 0.25s ease;
+        }
+
+        .filter-pill:hover {
+            background: #ef8354;
+            color: #ffffff;
+            border-color: #ef8354;
+        }
+
+        .filter-pill.active {
+            background: #ef8354;
+            color: #ffffff;
+            border-color: #ef8354;
+        }
+    </style>
+
 </head>
 <body>
 
 <!-- TOP HEADER -->
-<header class="top-header">
-  <div class="logo-area">
-    <!-- LOGO CLICK = MAIN PAGE -->
-    <a href="index.html" class="logo-link">
-      <img src="assets/lo.png" alt="Company Logo">
-      <span class="logo-hint">
-        Main page
-        <i class="logo-arrow">➜</i>
-      </span>
+   
+<header class="bg-primary text-white sticky top-0 z-50">
+  <!-- nav -->
+   <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+  <!-- LOGO -->
+  <div class="flex items-center gap-3 font-heading text-xl font-bold">
+    <a href="https://www.careercoded.com#home" class="flex items-center gap-3">
+      <img
+        src="../assets/logo.png"
+        alt="CareerCoded Logo"
+        class="w-9 h-9 object-contain scale-125 origin-left mr-2"
+      />
+      <span>CareerCoded</span>
     </a>
   </div>
+
+  <!-- DESKTOP MENU -->
+  <ul class="hidden md:flex gap-8 font-body text-sm items-center">
+
+    <li>
+      <a href="https://www.careercoded.com/#home" class="flex items-center gap-2 hover:text-accent transition">
+        <i class="fa-solid fa-house"></i>
+        Home
+      </a>
+    </li>
+
+    <li>
+      <a href="https://www.careercoded.com#courses" class="flex items-center gap-2 hover:text-accent transition">
+        <i class="fa-solid fa-laptop-code"></i>
+        Courses
+      </a>
+    </li>
+
+    <li>
+      <a href="https://www.careercoded.com#batches" class="flex items-center gap-2 hover:text-accent transition">
+        <i class="fa-solid fa-calendar-days"></i>
+        Upcoming Batches
+      </a>
+    </li>
+
+    <li>
+      <a href="https://www.careercoded.com#instructors" class="flex items-center gap-2 hover:text-accent transition">
+        <i class="fa-solid fa-chalkboard-user"></i>
+        Instructors
+      </a>
+    </li>
+
+    <li>
+      <a href="https://www.careercoded.com#contact" class="flex items-center gap-2 hover:text-accent transition">
+        <i class="fa-solid fa-envelope"></i>
+        Contact
+      </a>
+    </li>
+
+  </ul>
+
+  <!-- CTA (DESKTOP) -->
+  <a
+    href="https://www.careercoded.com#callback"
+    class="hidden md:flex items-center gap-2 bg-accent px-5 py-2 rounded-md font-heading text-sm font-semibold hover:opacity-90 transition"
+  >
+    <i class="fa-solid fa-phone"></i>
+    Request Callback
+  </a>
+
+  <!-- HAMBURGER (MOBILE) -->
+  <button id="menuBtn" class="md:hidden text-2xl">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+
+</nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden md:hidden bg-primary px-6 pb-4">
+    <ul class="flex flex-col gap-4 font-body text-sm">
+      <li><a href="https://www.careercoded.com#home" class="hover:text-accent">Home</a></li>
+      <li><a href="https://www.careercoded.com#courses" class="hover:text-accent">Courses</a></li>
+      <li><a href="https://www.careercoded.com#batches" class="hover:text-accent">Upcoming Batches</a></li>
+      <li><a href="https://www.careercoded.com#instructors" class="hover:text-accent">Instructors</a></li>
+      <li><a href="https://www.careercoded.com#contact" class="hover:text-accent">Contact</a></li>
+      <a href="https://www.careercoded.com#callback" class="mt-4 bg-accent py-2 rounded-md font-heading font-semibold text-center">
+        Request Callback
+      </a>
+    </ul>
+  </div>
 </header>
+
 
 <!-- HERO -->
 <section class="hero">

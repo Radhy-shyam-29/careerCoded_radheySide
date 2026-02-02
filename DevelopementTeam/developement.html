@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Terms & Conditions | Career Coded Pvt. Ltd.</title>
+  <title>Development Team | Career Coded</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="terms.css">
-  <!-- Google Fonts -->
+  <link rel="stylesheet" href="developement.css">
+  
+        <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
     <!-- Font Awesome CDN -->
@@ -64,7 +65,7 @@
 
 </head>
 <body>
-
+   
 <header class="bg-primary text-white sticky top-0 z-50">
   <!-- nav -->
    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -153,73 +154,108 @@
 </header>
 
 
-<section class="terms-section">
+
+<section class="team-section">
 
   <!-- HEADER -->
-  <div class="terms-header">
-    <h1>Terms & Conditions</h1>
-    <p>Career Coded Pvt. Ltd.</p>
+  <div class="team-header reveal">
+    <h1>Meet Our <span>Development Team</span></h1>
+    <p>Engineers who build, scale, and mentor</p>
   </div>
 
-  <!-- CONTENT -->
-  <div class="terms-content">
+  <!-- TEAM CARDS -->
+  <div class="team-container">
 
-    <p>
-      By accessing or using the Career Coded Pvt. Ltd. website, platform, or
-      services, you agree to comply with and be bound by the following
-      Terms & Conditions. Please read them carefully before using our services.
-    </p>
+    <!-- MEMBER 1 -->
+    <div class="team-card reveal">
+      <div class="img-box">
+        <img src="assets/dev1.jpg" alt="Developer 1">
+      </div>
+      <h3>Ishwar Verma</h3>
+      <span class="role">MERN Developer</span>
+      <p>
+        Builds scalable full-stack systems and mentors students
+        on real-world project architecture.
+      </p>
 
-    <h2>Use of Services</h2>
-    <p>
-      Our services may be used only for lawful purposes. You agree not to use
-      the website or its content in any way that violates applicable laws,
-      regulations, or third-party rights.
-    </p>
+      <!-- <div class="skills">
+        <span>React</span>
+        <span>Node</span>
+        <span>MongoDB</span>
+      </div> -->
 
-    <h2>Intellectual Property</h2>
-    <p>
-      All content available on this website, including text, logos, graphics,
-      course materials, and design elements, is the property of Career Coded
-      Pvt. Ltd. and is protected by applicable intellectual property laws.
-    </p>
+      <button class="contact-btn"
+        onclick="openContact('Ishwar Verma','918168099190')">
+        Contact
+      </button>
+    </div>
 
-    <p>
-      Copying, reproducing, distributing, or misusing any content without
-      prior written permission from Career Coded Pvt. Ltd. is strictly prohibited.
-    </p>
+    <!-- MEMBER 2 -->
+    <div class="team-card reveal">
+      <div class="img-box">
+        <img src="assets/dev2.jpg" alt="Developer 2">
+      </div>
+      <h3>Radhy Shyam</h3>
+      <span class="role">Frontend Developer</span>
+      <p>
+        Skilled in React, frontend logic, and modern CSS for responsive UI.
+      </p>
 
-    <h2>Accuracy of Information</h2>
-    <p>
-      We strive to keep the information on our website accurate and up to date.
-      However, we do not guarantee the completeness, accuracy, or reliability
-      of any content provided.
-    </p>
+      <!-- <div class="skills">
+        <span>React</span>
+        <span>JavaScript</span>
+        <span>CI-CD</span>
+      </div> -->
 
-    <h2>Limitation of Liability</h2>
-    <p>
-      Career Coded Pvt. Ltd. shall not be held liable for any direct, indirect,
-      incidental, or consequential loss or damage arising from the use of
-      our website or services.
-    </p>
+      <button class="contact-btn"
+        onclick="openContact('Radhy Shyam','919812345678')">
+        Contact
+      </button>
+    </div>
 
-    <h2>Changes to Terms</h2>
-    <p>
-      We reserve the right to update or modify these Terms & Conditions at any
-      time without prior notice. Continued use of the website after changes
-      indicates acceptance of the updated terms.
-    </p>
+    <!--memeber 3-->
+     <div class="team-card reveal">
+      <div class="img-box">
+        <img src="assets/dev3.jpg" alt="Developer 3">
+      </div>
+      <h3>Saksham Saini</h3>
+      <span class="role">MERN Developer</span>
+      <p>
+        Builds scalable full-stack systems and mentors students
+        on real-world project architecture.
+      </p>
 
-    <h2>Governing Law</h2>
-    <p>
-      These Terms & Conditions are governed by and interpreted in accordance
-      with the laws of India. Any disputes shall be subject to the jurisdiction
-      of Indian courts.
-    </p>
+      <!-- <div class="skills">
+        <span>React</span>
+        <span>Node</span>
+        <span>MongoDB</span>
+      </div> -->
+
+      <button class="contact-btn"
+        onclick="openContact('Saksham Saini','7419249256')">
+        Contact
+      </button>
+    </div>
+
 
   </div>
 
 </section>
 
+<!-- CONTACT MODAL -->
+<div class="contact-modal" id="contactModal">
+  <div class="contact-card">
+    <button class="close-btn" onclick="closeContact()">✕</button>
+    <h3 id="contactName"></h3>
+    <p>Choose how you want to connect</p>
+
+    <div class="contact-actions">
+      <a id="callLink" class="call-btn">📞 Call</a>
+      <a id="whatsappLink" class="whatsapp-btn" target="_blank">💬 WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<script src="developement.js"></script>
 </body>
 </html>
