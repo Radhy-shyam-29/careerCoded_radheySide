@@ -10,6 +10,7 @@ let batchesData = [];
 
 const HERO_BATCHES_LIMIT = 3;
 
+console.log('abc')
 
 
 /********************************
