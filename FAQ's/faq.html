@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FAQs | Coding Internship Institute</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="faq.css">
+  <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome CDN -->
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Custom Config -->
+    <script>
+    tailwind.config = {
+        theme: {
+        extend: {
+            colors: {
+            primary: '#2D3142',
+            secondary: '#4F5D75',
+            muted: '#BFC0C0',
+            accent: '#EF8354',
+            },
+            fontFamily: {
+            heading: ['Montserrat', 'sans-serif'],
+            body: ['Poppins', 'sans-serif'],
+            },
+        },
+        },
+    }
+    </script>
+
+    <style>
+        .filter-pill {
+            padding: 0.5rem 1.25rem;
+            border-radius: 9999px;
+            border: 1px solid #bfc0c0;
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: #2d3142;
+            background: #ffffff;
+            transition: all 0.25s ease;
+        }
+
+        .filter-pill:hover {
+            background: #ef8354;
+            color: #ffffff;
+            border-color: #ef8354;
+        }
+
+        .filter-pill.active {
+            background: #ef8354;
+            color: #ffffff;
+            border-color: #ef8354;
+        }
+    </style>
+
+</head>
+<body>
+
+<header class="bg-primary text-white sticky top-0 z-50">
+  <!-- nav -->
+   <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+  <!-- LOGO -->
+  <div class="flex items-center gap-3 font-heading text-xl font-bold">
+    <a href="https://www.careercoded.com#home" class="flex items-center gap-3">
+      <img
+        src="../assets/logo.png"
+        alt="CareerCoded Logo"
+        class="w-9 h-9 object-contain scale-125 origin-left mr-2"
+      />
+      <span>CareerCoded</span>
+    </a>
+  </div>
+
+  <!-- DESKTOP MENU -->
+  <ul class="hidden md:flex gap-8 font-body text-sm items-center">
+
+    <li>
+      <a href="https://www.careercoded.com/#home" class="flex items-center gap-2 hover:text-accent transition">
+        <i class="fa-solid fa-house"></i>
+        Home
+      </a>
+    </li>
+
+    <li>
+      <a href="https://www.careercoded.com#courses" class="flex items-center gap-2 hover:text-accent transition">
+        <i class="fa-solid fa-laptop-code"></i>
+        Courses
+      </a>
+    </li>
+
+    <li>
+      <a href="https://www.careercoded.com#batches" class="flex items-center gap-2 hover:text-accent transition">
+        <i class="fa-solid fa-calendar-days"></i>
+        Upcoming Batches
+      </a>
+    </li>
+
+    <li>
+      <a href="https://www.careercoded.com#instructors" class="flex items-center gap-2 hover:text-accent transition">
+        <i class="fa-solid fa-chalkboard-user"></i>
+        Instructors
+      </a>
+    </li>
+
+    <li>
+      <a href="https://www.careercoded.com#contact" class="flex items-center gap-2 hover:text-accent transition">
+        <i class="fa-solid fa-envelope"></i>
+        Contact
+      </a>
+    </li>
+
+  </ul>
+
+  <!-- CTA (DESKTOP) -->
+  <a
+    href="https://www.careercoded.com#callback"
+    class="hidden md:flex items-center gap-2 bg-accent px-5 py-2 rounded-md font-heading text-sm font-semibold hover:opacity-90 transition"
+  >
+    <i class="fa-solid fa-phone"></i>
+    Request Callback
+  </a>
+
+  <!-- HAMBURGER (MOBILE) -->
+  <button id="menuBtn" class="md:hidden text-2xl">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+
+</nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden md:hidden bg-primary px-6 pb-4">
+    <ul class="flex flex-col gap-4 font-body text-sm">
+      <li><a href="https://www.careercoded.com#home" class="hover:text-accent">Home</a></li>
+      <li><a href="https://www.careercoded.com#courses" class="hover:text-accent">Courses</a></li>
+      <li><a href="https://www.careercoded.com#batches" class="hover:text-accent">Upcoming Batches</a></li>
+      <li><a href="https://www.careercoded.com#instructors" class="hover:text-accent">Instructors</a></li>
+      <li><a href="https://www.careercoded.com#contact" class="hover:text-accent">Contact</a></li>
+      <a href="https://www.careercoded.com#callback" class="mt-4 bg-accent py-2 rounded-md font-heading font-semibold text-center">
+        Request Callback
+      </a>
+    </ul>
+  </div>
+</header>
+
+
+<section class="faq-section">
+
+  <div class="faq-header reveal">
+    <h5>HAVE ANY DOUBTS?</h5>
+    <h1><span>Frequently</span> Asked Questions</h1>
+    <p>Everything you need to know before joining</p>
+  </div>
+
+  <div class="faq-container reveal">
+
+    <!-- LEFT CATEGORIES -->
+    <div class="faq-categories">
+      <button class="cat active" data-cat="courses">Courses</button>
+      <button class="cat" data-cat="learning">Learning</button>
+      <button class="cat" data-cat="placements">Placements</button>
+      <button class="cat" data-cat="internships">Internships</button>
+      <button class="cat" data-cat="eligibility">Eligibility</button>
+      <button class="cat" data-cat="fees">Fees</button>
+      <button class="cat" data-cat="schedule">Schedule</button>
+      <button class="cat" data-cat="mentors">Mentors</button>
+      <button class="cat" data-cat="certification">Certification</button>
+      <button class="cat" data-cat="support">Student Support</button>
+    </div>
+
+    <!-- RIGHT CONTENT -->
+    <div class="faq-content">
+
+      <!-- COURSES -->
+      <div class="faq-group active" id="courses">
+        <div class="faq-item"><div class="faq-question">What courses do you offer?</div><div class="faq-answer">We offer DA, MERN, Python and DSA programs.</div></div>
+        <div class="faq-item"><div class="faq-question">Are courses beginner friendly?</div><div class="faq-answer">Yes, we start from fundamentals.</div></div>
+        <div class="faq-item"><div class="faq-question">Are courses online or offline?</div><div class="faq-answer">We offer online, offline and hybrid modes.</div></div>
+        <div class="faq-item"><div class="faq-question">Is self-paced learning available?</div><div class="faq-answer">Yes, recordings are provided.</div></div>
+        <div class="faq-item"><div class="faq-question">Do courses include projects?</div><div class="faq-answer">Yes, real-world projects are included.</div></div>
+        <div class="faq-item"><div class="faq-question">How long are the courses?</div><div class="faq-answer">4 to 8 months depending on program.</div></div>
+        <div class="faq-item"><div class="faq-question">Can I switch courses?</div><div class="faq-answer">Switching is possible early on.</div></div>
+        <div class="faq-item"><div class="faq-question">Are courses updated?</div><div class="faq-answer">Yes, curriculum is updated regularly.</div></div>
+        <div class="faq-item"><div class="faq-question">Are assessments included?</div><div class="faq-answer">Weekly assessments are conducted.</div></div>
+        <div class="faq-item"><div class="faq-question">Do you teach from scratch?</div><div class="faq-answer">Yes, no prior experience needed.</div></div>
+      </div>
+
+      <!-- LEARNING -->
+      <div class="faq-group" id="learning">
+        <div class="faq-item"><div class="faq-question">How are classes conducted?</div><div class="faq-answer">Live mentor-led sessions.</div></div>
+        <div class="faq-item"><div class="faq-question">Are recordings available?</div><div class="faq-answer">Yes, all sessions are recorded.</div></div>
+        <div class="faq-item"><div class="faq-question">Is learning project-based?</div><div class="faq-answer">Yes, hands-on learning.</div></div>
+        <div class="faq-item"><div class="faq-question">How many hours per week?</div><div class="faq-answer">10–15 hours recommended.</div></div>
+        <div class="faq-item"><div class="faq-question">Is doubt support available?</div><div class="faq-answer">Dedicated doubt sessions.</div></div>
+        <div class="faq-item"><div class="faq-question">Are assignments given?</div><div class="faq-answer">Yes, regular assignments.</div></div>
+        <div class="faq-item"><div class="faq-question">Is progress tracked?</div><div class="faq-answer">Weekly performance reviews.</div></div>
+        <div class="faq-item"><div class="faq-question">Is revision included?</div><div class="faq-answer">Yes, revision sessions are conducted.</div></div>
+        <div class="faq-item"><div class="faq-question">Is learning flexible?</div><div class="faq-answer">Flexible learning options available.</div></div>
+        <div class="faq-item"><div class="faq-question">Is learning beginner-safe?</div><div class="faq-answer">Yes, very beginner friendly.</div></div>
+      </div>
+
+      <!-- PLACEMENTS -->
+      <div class="faq-group" id="placements">
+        <div class="faq-item"><div class="faq-question">Is placement guaranteed?</div><div class="faq-answer">Placement support is guaranteed.</div></div>
+        <div class="faq-item"><div class="faq-question">When does placement start?</div><div class="faq-answer">After skill readiness.</div></div>
+        <div class="faq-item"><div class="faq-question">Do all students get placed?</div><div class="faq-answer">Depends on performance and consistency.</div></div>
+        <div class="faq-item"><div class="faq-question">What companies hire?</div><div class="faq-answer">Startups and tech companies.</div></div>
+        <div class="faq-item"><div class="faq-question">Is resume support provided?</div><div class="faq-answer">Yes, resume & GitHub polishing.</div></div>
+        <div class="faq-item"><div class="faq-question">Are mock interviews conducted?</div><div class="faq-answer">Yes, multiple mocks.</div></div>
+        <div class="faq-item"><div class="faq-question">Is placement lifetime?</div><div class="faq-answer">Support till first placement.</div></div>
+        <div class="faq-item"><div class="faq-question">Is salary negotiation taught?</div><div class="faq-answer">Yes, offer guidance provided.</div></div>
+        <div class="faq-item"><div class="faq-question">Is referral provided?</div><div class="faq-answer">Yes, via hiring partners.</div></div>
+        <div class="faq-item"><div class="faq-question">Is placement compulsory?</div><div class="faq-answer">Optional but recommended.</div></div>
+      </div>
+
+      <!-- INTERNSHIPS -->
+      <div class="faq-group" id="internships">
+        <div class="faq-item"><div class="faq-question">Are internships included?</div><div class="faq-answer">Yes, industry-grade internships.</div></div>
+        <div class="faq-item"><div class="faq-question">Are internships paid?</div><div class="faq-answer">Depends on company.</div></div>
+        <div class="faq-item"><div class="faq-question">Is internship mandatory?</div><div class="faq-answer">Yes, for experience.</div></div>
+        <div class="faq-item"><div class="faq-question">Are internships remote?</div><div class="faq-answer">Remote & onsite options.</div></div>
+        <div class="faq-item"><div class="faq-question">Who assigns internship tasks?</div><div class="faq-answer">Mentors & companies.</div></div>
+        <div class="faq-item"><div class="faq-question">Are internships certified?</div><div class="faq-answer">Yes, certificate provided.</div></div>
+        <div class="faq-item"><div class="faq-question">How long is internship?</div><div class="faq-answer">1–3 months.</div></div>
+        <div class="faq-item"><div class="faq-question">Is mentorship available?</div><div class="faq-answer">Yes, throughout internship.</div></div>
+        <div class="faq-item"><div class="faq-question">Is performance tracked?</div><div class="faq-answer">Yes, weekly feedback.</div></div>
+        <div class="faq-item"><div class="faq-question">Can internship convert to job?</div><div class="faq-answer">Yes, in many cases.</div></div>
+      </div>
+
+      <!-- ELIGIBILITY -->
+      <div class="faq-group" id="eligibility">
+        <div class="faq-item"><div class="faq-question">Who can join?</div><div class="faq-answer">Anyone interested in coding.</div></div>
+        <div class="faq-item"><div class="faq-question">Is degree required?</div><div class="faq-answer">No degree mandatory.</div></div>
+        <div class="faq-item"><div class="faq-question">Are freshers eligible?</div><div class="faq-answer">Yes.</div></div>
+        <div class="faq-item"><div class="faq-question">Are working professionals allowed?</div><div class="faq-answer">Yes.</div></div>
+        <div class="faq-item"><div class="faq-question">Is there an age limit?</div><div class="faq-answer">No age limit.</div></div>
+        <div class="faq-item"><div class="faq-question">Is coding background needed?</div><div class="faq-answer">Not required.</div></div>
+        <div class="faq-item"><div class="faq-question">Is aptitude test required?</div><div class="faq-answer">Basic screening only.</div></div>
+        <div class="faq-item"><div class="faq-question">Can non-tech join?</div><div class="faq-answer">Yes, with dedication.</div></div>
+        <div class="faq-item"><div class="faq-question">Is English mandatory?</div><div class="faq-answer">Basic understanding required.</div></div>
+        <div class="faq-item"><div class="faq-question">Is laptop required?</div><div class="faq-answer">Yes, personal laptop needed.</div></div>
+      </div>
+
+      <!-- FEES -->
+      <div class="faq-group" id="fees">
+        <div class="faq-item"><div class="faq-question">What is the course fee?</div><div class="faq-answer">Varies by program.</div></div>
+        <div class="faq-item"><div class="faq-question">Is EMI available?</div><div class="faq-answer">Yes.</div></div>
+        <div class="faq-item"><div class="faq-question">Is refund available?</div><div class="faq-answer">Refund policy applies.</div></div>
+        <div class="faq-item"><div class="faq-question">Are scholarships available?</div><div class="faq-answer">Yes, for deserving students.</div></div>
+        <div class="faq-item"><div class="faq-question">Is fee refundable?</div><div class="faq-answer">Partial refunds possible.</div></div>
+        <div class="faq-item"><div class="faq-question">Is GST included?</div><div class="faq-answer">Yes.</div></div>
+        <div class="faq-item"><div class="faq-question">Can fee be paid monthly?</div><div class="faq-answer">Yes, via EMI.</div></div>
+        <div class="faq-item"><div class="faq-question">Are there hidden charges?</div><div class="faq-answer">No hidden charges.</div></div>
+        <div class="faq-item"><div class="faq-question">Is registration fee required?</div><div class="faq-answer">Yes, nominal amount.</div></div>
+        <div class="faq-item"><div class="faq-question">Is fee negotiable?</div><div class="faq-answer">Depends on case.</div></div>
+      </div>
+
+      <!-- SCHEDULE -->
+      <div class="faq-group" id="schedule">
+        <div class="faq-item"><div class="faq-question">Class timings?</div><div class="faq-answer">Flexible batches available.</div></div>
+        <div class="faq-item"><div class="faq-question">Weekend batches?</div><div class="faq-answer">Yes.</div></div>
+        <div class="faq-item"><div class="faq-question">Can I change batch?</div><div class="faq-answer">Yes, with approval.</div></div>
+        <div class="faq-item"><div class="faq-question">Is attendance mandatory?</div><div class="faq-answer">Recommended for best results.</div></div>
+        <div class="faq-item"><div class="faq-question">Are holidays given?</div><div class="faq-answer">Yes.</div></div>
+        <div class="faq-item"><div class="faq-question">Missed class policy?</div><div class="faq-answer">Watch recordings.</div></div>
+        <div class="faq-item"><div class="faq-question">Batch size?</div><div class="faq-answer">Limited for quality.</div></div>
+        <div class="faq-item"><div class="faq-question">Live sessions?</div><div class="faq-answer">Yes.</div></div>
+        <div class="faq-item"><div class="faq-question">Timezone support?</div><div class="faq-answer">Yes.</div></div>
+        <div class="faq-item"><div class="faq-question">Class duration?</div><div class="faq-answer">1.5–2 hours.</div></div>
+      </div>
+
+      <!-- MENTORS -->
+      <div class="faq-group" id="mentors">
+        <div class="faq-item"><div class="faq-question">Who are the mentors?</div><div class="faq-answer">Industry professionals.</div></div>
+        <div class="faq-item"><div class="faq-question">Are mentors experienced?</div><div class="faq-answer">Yes, 5+ years experience.</div></div>
+        <div class="faq-item"><div class="faq-question">Can we interact with mentors?</div><div class="faq-answer">Yes.</div></div>
+        <div class="faq-item"><div class="faq-question">Are mentors full-time?</div><div class="faq-answer">Yes.</div></div>
+        <div class="faq-item"><div class="faq-question">Is 1:1 mentorship available?</div><div class="faq-answer">Yes.</div></div>
+        <div class="faq-item"><div class="faq-question">Are doubt sessions live?</div><div class="faq-answer">Yes.</div></div>
+        <div class="faq-item"><div class="faq-question">Can mentors help with jobs?</div><div class="faq-answer">Yes.</div></div>
+        <div class="faq-item"><div class="faq-question">Are mentors supportive?</div><div class="faq-answer">Very supportive.</div></div>
+        <div class="faq-item"><div class="faq-question">Are mentors assigned?</div><div class="faq-answer">Yes.</div></div>
+        <div class="faq-item"><div class="faq-question">Can mentors be changed?</div><div class="faq-answer">Rarely, but possible.</div></div>
+      </div>
+
+      <!-- CERTIFICATION -->
+      <div class="faq-group" id="certification">
+        <div class="faq-item"><div class="faq-question">Is certificate provided?</div><div class="faq-answer">Yes.</div></div>
+        <div class="faq-item"><div class="faq-question">Is certificate industry-recognized?</div><div class="faq-answer">Yes.</div></div>
+        <div class="faq-item"><div class="faq-question">When is certificate issued?</div><div class="faq-answer">After course completion.</div></div>
+        <div class="faq-item"><div class="faq-question">Is internship certificate included?</div><div class="faq-answer">Yes.</div></div>
+        <div class="faq-item"><div class="faq-question">Is certificate digital?</div><div class="faq-answer">Yes.</div></div>
+        <div class="faq-item"><div class="faq-question">Is certificate verifiable?</div><div class="faq-answer">Yes.</div></div>
+        <div class="faq-item"><div class="faq-question">Is certificate free?</div><div class="faq-answer">Included in fee.</div></div>
+        <div class="faq-item"><div class="faq-question">Can certificate be reissued?</div><div class="faq-answer">Yes.</div></div>
+        <div class="faq-item"><div class="faq-question">Is certificate useful?</div><div class="faq-answer">Yes, for resumes.</div></div>
+        <div class="faq-item"><div class="faq-question">Is certificate mandatory?</div><div class="faq-answer">Optional.</div></div>
+      </div>
+
+      <!-- SUPPORT -->
+      <div class="faq-group" id="support">
+        <div class="faq-item"><div class="faq-question">Is student support available?</div><div class="faq-answer">Yes.</div></div>
+        <div class="faq-item"><div class="faq-question">Support timings?</div><div class="faq-answer">Business hours.</div></div>
+        <div class="faq-item"><div class="faq-question">Support channels?</div><div class="faq-answer">Chat, email, calls.</div></div>
+        <div class="faq-item"><div class="faq-question">Technical help available?</div><div class="faq-answer">Yes.</div></div>
+        <div class="faq-item"><div class="faq-question">Academic help available?</div><div class="faq-answer">Yes.</div></div>
+        <div class="faq-item"><div class="faq-question">Placement help available?</div><div class="faq-answer">Yes.</div></div>
+        <div class="faq-item"><div class="faq-question">Is support fast?</div><div class="faq-answer">Quick response.</div></div>
+        <div class="faq-item"><div class="faq-question">Can issues be escalated?</div><div class="faq-answer">Yes.</div></div>
+        <div class="faq-item"><div class="faq-question">Is feedback taken?</div><div class="faq-answer">Yes.</div></div>
+        <div class="faq-item"><div class="faq-question">Is support friendly?</div><div class="faq-answer">Very.</div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script src="faq.js"></script>
+</body>
+</html>

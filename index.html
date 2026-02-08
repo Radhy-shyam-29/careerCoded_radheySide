@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Primary SEO -->
+  <title>CareerCoded | Job Oriented Tech Courses with Internship in India</title>
+
+  <meta name="description" content="CareerCoded offers job oriented tech courses like MERN Stack, Java with DSA, Data Science and Python along with 3 months internship, real projects and interview preparation.">
+
+  <meta name="keywords" content="MERN Stack Course with Internship, Java DSA Course with Internship, Data Science Training India, Full Stack Developer Course, Coding Institute India">
+
+  <!-- Technical SEO -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+
+  <!-- Trust & Branding -->
+  <meta name="author" content="CareerCoded">
+  <meta name="publisher" content="CareerCoded"> 
+  
+
+  <!-- Open Graph (Social + Indirect SEO) -->
+  <meta property="og:title" content="CareerCoded | Tech Courses with 3 Months Internship">
+  <meta property="og:description" content="Learn MERN Stack, Java with DSA, Data Science and more at CareerCoded with 3 months internship, real projects and job-focused training.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://careercoded.com">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://careercoded.com/">
+
+        <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome CDN -->
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Custom Config -->
+    <script>
+    tailwind.config = {
+        theme: {
+        extend: {
+            colors: {
+            primary: '#2D3142',
+            secondary: '#4F5D75',
+            muted: '#BFC0C0',
+            accent: '#EF8354',
+            },
+            fontFamily: {
+            heading: ['Montserrat', 'sans-serif'],
+            body: ['Poppins', 'sans-serif'],
+            },
+        },
+        },
+    }
+    </script>
+
+    <style>
+        .filter-pill {
+            padding: 0.5rem 1.25rem;
+            border-radius: 9999px;
+            border: 1px solid #bfc0c0;
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: #2d3142;
+            background: #ffffff;
+            transition: all 0.25s ease;
+        }
+
+        .filter-pill:hover {
+            background: #ef8354;
+            color: #ffffff;
+            border-color: #ef8354;
+        }
+
+        .filter-pill.active {
+            background: #ef8354;
+            color: #ffffff;
+            border-color: #ef8354;
+        }
+    </style>
+
+
+</head>
+<body class="font-body bg-white text-primary scroll-smooth">
+
+<header class="bg-primary text-white sticky top-0 z-50">
+  <!-- nav -->
+   <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+  <!-- LOGO -->
+  <div class="flex items-center gap-3 font-heading text-xl font-bold">
+    <a href="#home" class="flex items-center gap-3">
+      <img
+        src="./assets/logo.png"
+        alt="CareerCoded Logo"
+        class="w-9 h-9 object-contain scale-125 origin-left mr-2"
+      />
+      <span>CareerCoded</span>
+    </a>
+  </div>
+
+  <!-- DESKTOP MENU -->
+  <ul class="hidden md:flex gap-8 font-body text-sm items-center">
+
+    <li>
+      <a href="#home" class="flex items-center gap-2 hover:text-accent transition">
+        <i class="fa-solid fa-house"></i>
+        Home
+      </a>
+    </li>
+
+    <li>
+      <a href="#courses" class="flex items-center gap-2 hover:text-accent transition">
+        <i class="fa-solid fa-laptop-code"></i>
+        Courses
+      </a>
+    </li>
+
+    <li>
+      <a href="#batches" class="flex items-center gap-2 hover:text-accent transition">
+        <i class="fa-solid fa-calendar-days"></i>
+        Upcoming Batches
+      </a>
+    </li>
+
+    <li>
+      <a href="#instructors" class="flex items-center gap-2 hover:text-accent transition">
+        <i class="fa-solid fa-chalkboard-user"></i>
+        Instructors
+      </a>
+    </li>
+
+    <li>
+      <a href="#contact" class="flex items-center gap-2 hover:text-accent transition">
+        <i class="fa-solid fa-envelope"></i>
+        Contact
+      </a>
+    </li>
+
+  </ul>
+
+  <!-- CTA (DESKTOP) -->
+  <a
+    href="#callback"
+    class="hidden md:flex items-center gap-2 bg-accent px-5 py-2 rounded-md font-heading text-sm font-semibold hover:opacity-90 transition"
+  >
+    <i class="fa-solid fa-phone"></i>
+    Request Callback
+  </a>
+
+  <!-- HAMBURGER (MOBILE) -->
+  <button id="menuBtn" class="md:hidden text-2xl">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+
+</nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden md:hidden bg-primary px-6 pb-4">
+    <ul class="flex flex-col gap-4 font-body text-sm">
+      <li><a href="#home" class="hover:text-accent">Home</a></li>
+      <li><a href="#courses" class="hover:text-accent">Courses</a></li>
+      <li><a href="#batches" class="hover:text-accent">Upcoming Batches</a></li>
+      <li><a href="#instructors" class="hover:text-accent">Instructors</a></li>
+      <li><a href="#contact" class="hover:text-accent">Contact</a></li>
+      <a href="#callback" class="mt-4 bg-accent py-2 rounded-md font-heading font-semibold text-center">
+        Request Callback
+      </a>
+    </ul>
+  </div>
+</header>
+
+
+<section id="home" class="relative bg-white pt-24 min-h-screen pb-0 overflow-hidden">
+
+  <!-- Background SVG -->
+  <div class="absolute inset-x-0 bottom-0 z-0 pointer-events-none flex justify-center">
+    <img
+      src="./assets/grid.svg"
+      alt="hero background"
+      class="w-[120%] h-72 object-cover opacity-90"
+    />
+  </div>
+
+  <!-- Hero Content -->
+  <div class="relative z-10 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-14 items-center">
+    
+    <!-- Left -->
+    <div>
+      <h1 class="font-heading text-4xl md:text-5xl font-bold mb-6 leading-tight text-primary">
+        Build Your Career with
+        <span class="text-accent block mt-1">CareerCoded</span>
+      </h1>
+
+      <p class="relative pl-4 mb-10 max-w-lg leading-relaxed text-[17px] text-gray-600">
+        <span class="absolute left-0 top-2 w-[3px] h-10 bg-accent rounded"></span>
+      
+        Master
+        <span class="font-semibold text-gray-900">job-ready skills</span>,
+        gain
+        <span class="font-semibold text-gray-900">real-world experience</span>,
+        and secure a
+        <span class="font-semibold text-accent">3-month internship</span>
+        designed to turn <span class="font-semibold text-gray-900">learners into earners</span>.
+      </p>
+
+      <div class="flex flex-wrap gap-4 mt-8">
+
+  <!-- Explore Courses -->
+  <a href="#courses">
+    <button
+      class="bg-accent text-white px-7 py-3 rounded-md font-semibold
+             transition-all duration-300 ease-in-out
+             hover:bg-[#e76f3c] hover:shadow-lg hover:-translate-y-0.5"
+    >
+      Explore Courses
+    </button>
+  </a>
+
+  <!-- Request Callback -->
+  <a href="#callback">
+    <button
+      class="border border-primary text-primary px-7 py-3 rounded-md font-semibold
+             transition-all duration-300 ease-in-out
+             hover:bg-primary hover:text-white hover:shadow-md"
+    >
+      Request Callback
+    </button>
+  </a>
+
+</div>
+
+
+    </div>
+
+    <!-- Right -->
+    <div class="flex justify-center mt-10 md:mt-0">
+      <div class="w-full max-w-sm space-y-4" id="heroBatches">
+        <!-- Upcoming batches will be injected here -->
+         
+      </div>
+
+      <!-- <div
+        class="w-60 h-60 md:w-96 md:h-96 bg-secondary/20 rounded-2xl
+               flex items-center justify-center text-muted
+               transition-all duration-300
+               hover:shadow-xl hover:-translate-y-1"
+      >
+        Hero Image
+      </div> -->
+    </div>
+
+  </div>
+</section>
+
+
+<!-- COURSES SECTION -->
+<section id="courses" class="bg-secondary/10 py-24">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Heading -->
+    <div class="text-center mb-8">
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-primary mb-3">
+        Our Courses
+      </h2>
+      <p class="text-muted max-w-xl mx-auto">
+        Industry-oriented programs designed to make you job-ready.
+      </p>
+    </div>
+
+    <!-- FILTER + SEARCH BAR -->
+<div class="flex flex-wrap justify-center items-center gap-3 mb-14">
+
+  <!-- FILTER PILLS -->
+  <div class="flex flex-wrap gap-3 justify-center">
+    <button
+      class="filter-pill active"
+      data-category="All"
+      onclick="filterCourses('All')"
+    >
+      All
+    </button>
+
+    <button
+      class="filter-pill"
+      data-category="Web Development"
+      onclick="filterCourses('Web Development')"
+    >
+      Web Development
+    </button>
+
+    <button
+      class="filter-pill"
+      data-category="Backend Development"
+      onclick="filterCourses('Backend Development')"
+    >
+      Backend
+    </button>
+
+    <button
+      class="filter-pill"
+      data-category="Programming"
+      onclick="filterCourses('Programming')"
+    >
+      DSA
+    </button>
+  </div>
+
+  <!-- SEARCH BAR -->
+  <input
+    type="text"
+    id="courseSearch"
+    placeholder="Search courses..."
+    class="w-64 px-4 py-2.5 rounded-md border border-muted/40
+           focus:outline-none focus:border-accent"
+  />
+
+</div>
+
+
+    <!-- Dynamic Courses Grid -->
+    <div
+      id="coursesContainer"
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10"
+    ></div>
+
+  </div>
+</section>
+
+
+<!-- REQUEST CALLBACK SECTION -->
+<section id="callback" class="bg-secondary/5 py-28">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Heading -->
+    <div class="text-center mb-16">
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-primary mb-4">
+        Request a Callback
+      </h2>
+      <p class="text-muted max-w-xl mx-auto leading-relaxed">
+        Share your details and our academic counsellor will connect with you
+        to guide you towards the right career path.
+      </p>
+    </div>
+
+    <!-- Form Card -->
+    <div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-xl p-10 border border-muted/20">
+
+      <form id="callbackForm" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <!-- Full Name -->
+        <div>
+          <label class="block text-sm font-medium text-primary mb-1">
+            Full Name
+          </label>
+          <input
+            type="text"
+            name="name"
+            placeholder="Enter your full name"
+            class="w-full px-4 py-3 rounded-md border border-muted/40
+                   focus:outline-none focus:border-accent"
+          />
+        </div>
+
+        <!-- Email -->
+        <div>
+          <label class="block text-sm font-medium text-primary mb-1">
+            Email Address
+          </label>
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter your email address"
+            class="w-full px-4 py-3 rounded-md border border-muted/40
+                   focus:outline-none focus:border-accent"
+          />
+        </div>
+
+        <!-- Phone Number (NEW) -->
+        <div>
+          <label class="block text-sm font-medium text-primary mb-1">
+            Phone Number
+          </label>
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Enter your phone number"
+            class="w-full px-4 py-3 rounded-md border border-muted/40
+                   focus:outline-none focus:border-accent"
+          />
+        </div>
+
+        <!-- College -->
+        <div>
+          <label class="block text-sm font-medium text-primary mb-1">
+            College Name
+          </label>
+          <input
+            type="text"
+            name="college"
+            placeholder="Your college name"
+            class="w-full px-4 py-3 rounded-md border border-muted/40
+                   focus:outline-none focus:border-accent"
+          />
+        </div>
+
+        <!-- Degree -->
+        <div>
+          <label class="block text-sm font-medium text-primary mb-1">
+            Degree
+          </label>
+          <select
+            name="degree"
+            class="w-full px-4 py-3 rounded-md border border-muted/40 bg-white
+                   focus:outline-none focus:border-accent"
+          >
+            <option value="">Select Degree</option>
+            <!-- <option>B.Tech</option>
+            <option>BCA</option>
+            <option>B.Sc</option>
+            <option>MCA</option>
+            <option>M.Tech</option>
+            <option>Diploma</option>
+            <option>Other</option>
+
+
+            <option value="">Select Degree</option> -->
+
+            <!-- Undergraduate Degrees -->
+            <option>B.Tech</option>
+            <option>B.E</option>
+            <option>BCA</option>
+            <option>B.Sc</option>
+            <option>B.Com</option>
+            <option>B.A</option>
+            <option>BBA</option>
+            <option>BMS</option>
+            <option>B.Des</option>
+            <option>BFA</option>
+            <option>BHM</option>
+            <option>B.Pharm</option>
+            <option>B.Arch</option>
+            <option>LLB</option>
+
+            <!-- Postgraduate Degrees -->
+            <option>M.Tech</option>
+            <option>M.E</option>
+            <option>MCA</option>
+            <option>M.Sc</option>
+            <option>M.Com</option>
+            <option>M.A</option>
+            <option>MBA</option>
+            <option>M.Des</option>
+            <option>M.Pharm</option>
+            <option>LLM</option>
+
+            <!-- Diploma & Certifications -->
+            <option>Diploma</option>
+            <option>Advanced Diploma</option>
+            <option>ITI</option>
+            <option>Polytechnic</option>
+
+            <!-- Doctorate -->
+            <option>PhD</option>
+
+            <!-- Others -->
+            <option>12th Pass</option>
+            <option>10th Pass</option>
+            <option>Other</option>
+
+          </select>
+        </div>
+
+        <!-- Course Interest -->
+        <div>
+          <label class="block text-sm font-medium text-primary mb-1">
+            Course Interested In
+          </label>
+          <select
+            name="interest"
+            class="w-full px-4 py-3 rounded-md border border-muted/40 bg-white
+                   focus:outline-none focus:border-accent"
+          >
+          <option value="">Select Course</option>
+
+              <!-- Web Development -->
+              <option>Full Stack Web Development</option>
+              <option>Frontend Development</option>
+              <option>Backend Development</option>
+              <option>MERN Stack Development</option>
+              <option>MEAN Stack Development</option>
+              <option>Web Development (Beginner)</option>
+
+              <!-- Programming & Core CS -->
+              <option>Data Structures & Algorithms (DSA)</option>
+              <option>DSA with Java</option>
+              <option>DSA & Problem Solving</option>
+              <!-- <option>Competitive Programming</option> -->
+              <option>Programming Fundamentals</option>
+
+              <!-- Data & AI -->
+              <option>Data Analytics</option>
+              <!-- <option>Data Science</option> -->
+              <!-- <option>Machine Learning</option> -->
+              <!-- <option>Artificial Intelligence</option> -->
+              <option>Python for Data Science</option>
+
+              <!-- Mobile & App Development -->
+              <!-- <option>Android App Development</option>
+              <option>iOS App Development</option>
+              <option>Flutter App Development</option>
+              <option>React Native App Development</option> -->
+
+              <!-- Cloud, DevOps & Backend -->
+              <!-- <option>Cloud Computing (AWS / Azure)</option> -->
+              <!-- <option>DevOps Engineering</option>
+              <option>System Design</option>
+              <option>API Development</option> -->
+
+              <!-- Cyber & Testing -->
+              <!-- <option>Cyber Security</option>
+              <option>Ethical Hacking</option>
+              <option>Software Testing (Manual + Automation)</option> -->
+
+              <!-- Design -->
+              <!-- <option>UI/UX Design</option>
+              <option>Graphic Design</option> -->
+
+              <!-- Career Oriented -->
+              <option>Interview Preparation</option>
+              <option>Job Ready Program</option>
+              <option>Internship Program</option>
+              <option>Placement Preparation</option>
+
+              <!-- Beginner / Unsure -->
+              <option>Computer Basics</option>
+              <option>Not Sure (Need Guidance)</option>
+
+              <!-- Others -->
+              <option>Other</option>
+
+            <!-- <option value="">Select Course</option>
+            <option>Full Stack Web Development</option>
+            <option>Backend Development</option>
+            <option>DSA & Problem Solving</option>
+            <option>Data Analytics</option>
+            <option>Not Sure (Need Guidance)</option> -->
+          </select>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="md:col-span-2 mt-4">
+          <button
+            type="submit"
+            class="w-full bg-accent text-white py-3 rounded-md font-semibold
+                   transition-all duration-300
+                   hover:opacity-90 hover:shadow-lg"
+          >
+            Request Callback
+          </button>
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- WHY JOIN US -->
+<section id="why-us" class="bg-white py-28">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Heading -->
+    <div class="text-center mb-16">
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-primary mb-4">
+        Why Join Us
+      </h2>
+      <p class="text-muted max-w-xl mx-auto">
+        Everything we do is focused on making you industry-ready.
+      </p>
+    </div>
+
+    <!-- Cards Container -->
+    <div
+      id="whyContainer"
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10"
+    ></div>
+
+  </div>
+</section>
+
+
+
+<!-- INSTRUCTORS SECTION -->
+<section id="instructors" class="bg-secondary/5 py-28">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Heading -->
+    <div class="text-center mb-16">
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-primary mb-4">
+        Meet Our Instructors
+      </h2>
+      <p class="text-muted max-w-xl mx-auto">
+        Learn from professionals who are actively working in the industry.
+      </p>
+    </div>
+
+    <!-- Cards -->
+    <div
+      id="instructorsContainer"
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10"
+    ></div>
+
+  </div>
+</section>
+
+
+<!-- Upcomming Batches -->
+
+<section id="batches" class="bg-secondary/5 py-28">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="text-center mb-16">
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-primary mb-4">
+        Upcoming Batches
+      </h2>
+      <p class="text-muted max-w-xl mx-auto">
+        Choose the right program and start your career journey with us.
+      </p>
+    </div>
+
+    <div
+      id="batchesContainer"
+      class="grid grid-cols-1 md:grid-cols-2 gap-10"
+    ></div>
+
+  </div>
+</section>
+
+<!-- *********** -->
+
+<!-- CONTACT US – ULTRA PREMIUM -->
+<section id="contact" class="relative bg-white py-28 overflow-hidden">
+
+  <!-- Subtle Background Accent -->
+  <div class="absolute -top-40 -right-40 w-96 h-96 bg-accent/10 rounded-full blur-3xl"></div>
+  <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-secondary/20 rounded-full blur-3xl"></div>
+
+  <div class="relative max-w-7xl mx-auto px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+
+      <!-- LEFT CONTENT -->
+      <div>
+        <p class="text-accent font-semibold tracking-wide mb-4">
+          CONTACT US
+        </p>
+
+        <h2 class="font-heading text-4xl md:text-5xl font-bold text-primary leading-tight mb-8">
+          Let’s Build Your <br />
+          <span class="text-accent">Career Together</span>
+        </h2>
+
+        <p class="text-muted max-w-lg mb-10 leading-relaxed">
+          Whether you’re confused about choosing the right course,
+          upcoming batches, or career guidance — our experts are just
+          one step away from helping you.
+        </p>
+
+        <!-- INFO LIST -->
+        <div class="space-y-6 text-sm text-gray-700">
+
+          <!-- ADDRESS -->
+          <div class="flex items-start gap-5">
+            <div
+              class="w-11 h-11 rounded-xl bg-accent/10 flex items-center justify-center text-accent shrink-0"
+            >
+              <i class="fa-solid fa-location-dot text-lg"></i>
+            </div>
+
+            <p class="leading-relaxed">
+              <strong class="block mb-1 text-primary">Office Address</strong>
+              CareerCoded Institute,<br />
+              C-79, Block C, Sector 2,<br />
+              Near Metro Station – Sector 15, Noida
+            </p>
+          </div>
+
+          <!-- PHONE -->
+          <div class="flex items-start gap-5">
+            <div
+              class="w-11 h-11 rounded-xl bg-accent/10 flex items-center justify-center text-accent shrink-0"
+            >
+              <i class="fa-solid fa-phone text-lg"></i>
+            </div>
+
+            <p class="leading-relaxed">
+              <strong class="block mb-1 text-primary">Call Us</strong>
+              <a href="tel:+919266711474" class="hover:text-accent transition">
+                +91 92667 11474
+              </a><br />
+              Mon – Sat (10 AM – 7 PM)
+            </p>
+          </div>
+
+          <!-- EMAIL -->
+          <div class="flex items-start gap-5">
+            <div
+              class="w-11 h-11 rounded-xl bg-accent/10 flex items-center justify-center text-accent shrink-0"
+            >
+              <i class="fa-solid fa-envelope text-lg"></i>
+            </div>
+
+            <p class="leading-relaxed">
+              <strong class="block mb-1 text-primary">Email</strong>
+              <a
+                href="mailto:careercodedcc@gmail.com"
+                class="hover:text-accent transition"
+              >
+                careercodedcc@gmail.com
+              </a>
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+     <!-- RIGHT CTA PANEL -->
+<div class="relative self-center">
+  <div class="bg-white rounded-3xl border border-muted/30 shadow-xl p-10">
+
+    <h3 class="font-heading text-2xl font-semibold text-primary mb-4">
+      Ready to Take the Next Step?
+    </h3>
+
+    <p class="text-sm text-muted mb-8 leading-relaxed">
+      Start with a quick callback request or directly connect
+      with our academic counsellors.
+    </p>
+
+    <div class="flex flex-col gap-3">
+      <a
+        href="#callback"
+        class="inline-flex justify-center items-center
+               bg-accent text-white py-3 rounded-md font-semibold
+               hover:opacity-90 transition"
+      >
+        Request a Callback
+      </a>
+
+      <a
+        href="mailto:support@careercoded.in"
+        class="inline-flex justify-center items-center
+               border border-primary text-primary py-3 rounded-md
+               font-semibold hover:bg-primary hover:text-white transition"
+      >
+        Email Our Team
+      </a>
+    </div>
+
+    <p class="text-xs text-muted text-center mt-6">
+      We usually respond within a few hours.
+    </p>
+
+  </div>
+</div>
+
+
+    </div>
+  </div>
+</section>
+
+
+<footer class="relative bg-primary text-white pt-28 overflow-hidden">
+
+  <!-- Subtle Gradient Glow -->
+  <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-accent/10 rounded-full blur-3xl"></div>
+
+  <div class="relative max-w-7xl mx-auto px-6">
+
+    <!-- TOP BRAND AREA -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 mb-24">
+
+      <!-- BRAND STORY -->
+      <div>
+        <h3 class="font-heading text-3xl font-bold mb-6">
+          CareerCoded
+        </h3>
+
+        <p class="text-white/70 max-w-lg leading-relaxed text-lg">
+          CareerCoded is a career-focused tech education platform helping
+          students and professionals build real-world skills, work on
+          industry-grade projects, and secure job opportunities with confidence.
+        </p>
+
+        <!-- SOCIAL ICONS -->
+        <div class="flex gap-5 mt-10">
+
+          <a href="https://www.linkedin.com/company/career-coded/"
+             target="_blank"
+             class="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center hover:bg-accent transition">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+
+          <a href="https://www.instagram.com/career.coded"
+             target="_blank"
+             class="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center hover:bg-accent transition">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+
+          <a href="https://youtube.com/@careercoded"
+             target="_blank"
+             class="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center hover:bg-accent transition">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+
+          <a href="https://www.facebook.com/share/1GkYquPa75/"
+             target="_blank"
+             class="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center hover:bg-accent transition">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+
+          <a href="https://wa.me/message/CXMSMSX4G2M3E1"
+             target="_blank"
+             class="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center hover:bg-accent transition">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+         <a href="https://x.com/careercodedcc"
+   target="_blank"
+   class="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center hover:bg-accent transition">
+  <i class="fa-brands fa-x-twitter"></i>
+</a>
+
+
+        </div>
+      </div>
+
+      <!-- CTA BLOCK -->
+      <div class="bg-white/5 border border-white/10 rounded-3xl p-12 backdrop-blur">
+        <h4 class="font-heading text-2xl font-semibold mb-4">
+          Start Your Career Journey
+        </h4>
+
+        <p class="text-white/70 mb-8 leading-relaxed">
+          Unsure which course fits you best?  
+          Talk to our experts and get a personalized roadmap.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a
+            href="#callback"
+            class="flex-1 text-center bg-accent text-white py-4 rounded-xl font-semibold text-lg hover:opacity-90 transition">
+            Request Callback
+          </a>
+
+          <a
+            href="#courses"
+            class="flex-1 text-center border border-white/30 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-primary transition">
+            Explore Courses
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- LINKS GRID -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-12 pb-20 border-t border-white/10 pt-16">
+
+      <div>
+        <h5 class="font-heading font-semibold mb-5">Programs</h5>
+        <ul class="space-y-3 text-white/60">
+          <li><a href="#courses" class="hover:text-accent">Full Stack Development</a></li>
+          <li><a href="#courses" class="hover:text-accent">Backend Engineering</a></li>
+          <li><a href="#courses" class="hover:text-accent">DSA & Problem Solving</a></li>
+          <li><a href="#courses" class="hover:text-accent">Data Analytics</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5 class="font-heading font-semibold mb-5">Company</h5>
+        <ul class="space-y-3 text-white/60">
+          <li><a href="./Aboutus/index.html" class="hover:text-accent">About Us</a></li>
+          <li><a href="./Aboutus/index.html#whoweare" class="hover:text-accent">Why CareerCoded</a></li>
+          <li><a href="#instructors" class="hover:text-accent">Instructors</a></li>
+          <li><a href="/contact" class="hover:text-accent">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5 class="font-heading font-semibold mb-5">Resources</h5>
+        <ul class="space-y-3 text-white/60">
+          <!-- <li><a href="/reviews" class="hover:text-accent">Student Reviews</a></li> -->
+          <li><a href="./placementSupport/placement.html" class="hover:text-accent">Placement Support</a></li>
+          <!-- <li><a href="/blog" class="hover:text-accent">Blog</a></li> -->
+          <li><a href="/FAQ's/faq.html" class="hover:text-accent">FAQs</a></li>
+        </ul>
+      </div>
+
+      <!-- contack -->
+
+      <div>
+        <h5 class="font-heading font-semibold mb-5">Contact</h5>
+
+        <ul class="space-y-4 text-white/60">
+
+          <!-- LOCATION -->
+          <li class="flex gap-3 items-start">
+            <i class="fa-solid fa-location-dot text-accent mt-1"></i>
+            <!-- <a
+              href="https://www.google.com/maps/search/?api=1&query=B-128+Block+B+Sector+2+Near+Metro+Station+Sector+15+Noida"
+              target="_blank"
+              class="hover:text-accent transition leading-relaxed"
+            >
+          </a> -->
+          C-79, Block C, Sector 2,  
+          Near Metro Station – Sector 15, Noida
+          </li>
+
+          <!-- PHONE -->
+          <li class="flex gap-3 items-center">
+            <i class="fa-solid fa-phone text-accent"></i>
+            <a
+              href="tel:+919266711474"
+              class="hover:text-accent transition"
+            >
+              +91 9266711474
+            </a>
+          </li>
+
+          <!-- EMAIL -->
+          <li class="flex gap-3 items-center">
+            <i class="fa-solid fa-envelope text-accent"></i>
+            <a
+              href="mailto:careercodedcc@gmail.com"
+              class="hover:text-accent transition"
+            >
+            careercodedcc@gmail.com
+            </a>
+          </li>
+
+        </ul>
+      </div>
+
+
+      <!-- <div>
+        <h5 class="font-heading font-semibold mb-5">Contact</h5>
+        <ul class="space-y-3 text-white/60">
+          <li>B-128, 1st Floor, Block B, Sector 2, Near Metro Station - Sector 15, Noida</li>
+          <li>+91 9266711474</li>
+          <li>
+            <a href="mailto:careercodedcc@gmail.com" class="hover:text-accent">
+              careercodedcc@gmail.com
+            </a>
+          </li>
+        </ul>
+      </div> -->
+
+    </div>
+
+    <!-- BOTTOM BAR -->
+    <div class="py-8 flex flex-col md:flex-row justify-between items-center text-sm text-white/50">
+      <p>© 2026 CareerCoded. Crafted with care.</p>
+      <!-- <a href="./DevelopementTeam/developement.html">Our Developement Team</a> -->
+
+      <div class="flex gap-8 mt-4 md:mt-0">
+        <a href="./privacy/privacy.html" class="hover:text-accent transition">Privacy Policy</a>
+        <a href="./terms&C/terms.html" class="hover:text-accent transition">Terms & Conditions</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+
+
+
+
+
+<!-- COURSE DETAILS MODAL -->
+<div
+  id="courseModal"
+  class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50"
+>
+  <div class="bg-white max-w-2xl w-full mx-4 rounded-2xl overflow-hidden">
+
+    <!-- Header -->
+    <div class="bg-primary text-white px-6 py-4 flex justify-between items-center">
+      <h3 id="modalTitle" class="font-heading text-xl font-bold"></h3>
+      <button onclick="closeModal()" class="text-2xl">×</button>
+    </div>
+
+    <!-- Content -->
+    <div class="p-6 grid md:grid-cols-2 gap-6">
+
+      <!-- Left Info -->
+      <div>
+        <p class="text-muted mb-4" id="modalDescription"></p>
+
+        <ul class="space-y-2 text-sm">
+          <li><strong>Duration:</strong> <span id="modalDuration"></span></li>
+          <li><strong>Fees:</strong> <span id="modalFees"></span></li>
+          <li><strong>Level:</strong> <span id="modalLevel"></span></li>
+          <li><strong>Placement:</strong> <span id="modalPlacement"></span></li>
+          <li><strong>Trainers:</strong> <span id="modalTrainers"></span></li>
+        </ul>
+      </div>
+
+      <!-- Right Highlights -->
+      <div>
+        <h4 class="font-heading font-semibold mb-3">What you will learn</h4>
+        <ul id="modalHighlights" class="list-disc list-inside text-sm text-muted space-y-1"></ul>
+
+        <!-- <a href="#callback">
+          <button class="mt-6 w-full bg-accent text-white py-3 rounded-md font-semibold hover:opacity-90">
+            Enroll Now
+          </button>
+        </a> -->
+
+        <button
+          onclick="handleEnrollClick()"
+          class="mt-6 w-full bg-accent text-white py-3 rounded-md font-semibold hover:opacity-90"
+        >
+          Enroll Now
+        </button>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+<!-- <script src="data.js"></script> -->
+<script src="whydata.js"></script>
+<!-- <script src="instructorsData.js"></script> -->
+<!-- <script src="batchesData.js"></script> -->
+<script src="script.js"></script>
+
+
+</body>
+</html>
