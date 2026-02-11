@@ -119,6 +119,7 @@ h2 {
   justify-content: center;
   gap: 2rem;
   margin-top: 3rem;
+  flex-wrap: wrap;
 }
 
 .skill {
@@ -299,3 +300,6 @@ footer {
   padding: 2rem;
   background: #1f2230;
 }
+
+
+

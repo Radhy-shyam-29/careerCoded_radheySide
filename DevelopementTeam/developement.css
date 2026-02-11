@@ -200,3 +200,98 @@ body {
   transform: translateY(-14px) scale(1.04);
   filter: brightness(1.05) contrast(1.05);
 }
+
+
+/* ================= CEO SECTION ================= */
+
+.ceo-section {
+  padding: 6rem 8%;
+  background: linear-gradient(145deg, #2d3142, #1f2232);
+}
+
+.ceo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+/* IMAGE */
+.ceo-img-box {
+  width: 280px;
+  height: 280px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 4px solid var(--accent);
+  background: #3f4c63; /* placeholder color */
+}
+
+.ceo-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* CONTENT */
+.ceo-content {
+  max-width: 550px;
+}
+
+.ceo-content h2 {
+  color: var(--accent);
+  font-size: 1rem;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+
+.ceo-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.6rem;
+}
+
+.ceo-role {
+  display: block;
+  color: var(--muted);
+  margin-bottom: 1.2rem;
+}
+
+.ceo-content p {
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+/* HIGHLIGHTS */
+.ceo-highlights {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.ceo-highlights h3 {
+  color: var(--accent);
+  font-size: 1.4rem;
+}
+
+.ceo-highlights span {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+/* BUTTON */
+.ceo-btn {
+  display: inline-block;
+  padding: 0.7rem 1.8rem;
+  border-radius: 30px;
+  background: var(--accent);
+  color: var(--white);
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.ceo-btn:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}

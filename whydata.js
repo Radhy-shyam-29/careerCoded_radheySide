@@ -2,7 +2,7 @@ const whyData = [
   {
     id: 1,
     title: "Industry-Aligned Curriculum",
-    image: "./assets/why.png",
+    image: "./WhyPic/industry_aligned.png",
     description:
       "Our curriculum is carefully designed with industry experts to match real company requirements.",
     points: [
@@ -14,7 +14,7 @@ const whyData = [
   {
     id: 2,
     title: "Hands-on Live Projects",
-    image: "./assets/why.png",
+    image: "./WhyPic/hand-on_live.png",
     description:
       "Students work on real-world projects to gain practical experience before interviews.",
     points: [
@@ -26,7 +26,7 @@ const whyData = [
   {
     id: 3,
     title: "3 Months Job Assistance",
-    image: "./assets/java.svg",
+    image: "./WhyPic/3month_job.png",
     description:
       "We don’t stop at teaching. Our placement support helps you land your first job.",
     points: [
@@ -38,7 +38,7 @@ const whyData = [
   {
     id: 4,
     title: "Expert Industry Mentors",
-    image: "./assets/java.svg",
+    image: "./WhyPic/expert_industry.png",
     description:
       "Learn directly from professionals working in top tech companies.",
     points: [

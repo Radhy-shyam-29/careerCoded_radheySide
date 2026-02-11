@@ -37,12 +37,41 @@ document.addEventListener("DOMContentLoaded", () => {
   /* ------------------------------
      HAMBURGER MENU
   --------------------------------*/
-  if (menuBtn) {
-    menuBtn.addEventListener("click", () => {
-      mobileMenu.classList.toggle("hidden");
-    });
-  }
+//   const menuBtn = document.getElementById("menuBtn");
+// const mobileMenu = document.getElementById("mobileMenu");
 
+if (menuBtn && mobileMenu) {
+
+  // Toggle
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+
+  // Handle link click
+  mobileMenu.addEventListener("click", (e) => {
+    const link = e.target.closest("a");
+    if (!link) return;
+
+    const targetId = link.getAttribute("href");
+
+    // Only handle internal section links
+    if (targetId && targetId.startsWith("#")) {
+      e.preventDefault();
+
+      const targetSection = document.querySelector(targetId);
+
+      if (targetSection) {
+        mobileMenu.classList.add("hidden");
+
+        targetSection.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      }
+    }
+  });
+
+}
 
   /* ------------------------------
      FETCH COURSES FROM EXCEL
@@ -690,7 +719,7 @@ function renderBatches() {
           ${batch.badge}
         </span>
 
-        <h3 class="font-heading text-xl font-semibold text-primary mb-2">
+        <h3 class="font-heading text-xl font-semibold text-primary mb-2 pt-3">
           ${batch.title}
         </h3>
 
@@ -748,3 +777,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+const logoLink = document.querySelector('a[href="#home"]');
+
+if (logoLink) {
+  logoLink.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    const homeSection = document.querySelector("#home");
+
+    if (homeSection) {
+      // Close mobile menu if open
+      const mobileMenu = document.getElementById("mobileMenu");
+      if (mobileMenu) {
+        mobileMenu.classList.add("hidden");
+      }
+
+      homeSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
+  });
+}
